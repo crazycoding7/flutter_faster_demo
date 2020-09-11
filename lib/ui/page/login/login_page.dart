@@ -1,10 +1,10 @@
 import 'package:common_utils/common_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterapp/models/user_info_model.dart';
-import 'package:flutterapp/net/api.dart';
-import 'package:flutterapp/net/result_data.dart';
+import 'package:flutterapp/network/api.dart';
+import 'package:flutterapp/network/result_data.dart';
 import 'package:flutterapp/provider/user_info_provider.dart';
+import 'package:flutterapp/ui/page/login/user_info_model.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:provider/provider.dart';
 

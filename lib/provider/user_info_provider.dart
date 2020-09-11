@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/models/user_info_model.dart';
+import 'package:flutterapp/ui/page/login/user_info_model.dart';
 
 class UserInfoProvider extends ChangeNotifier {
   UserInfoModel _userInfoModel;

@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:flutterapp/net/code.dart';
-import 'package:flutterapp/net/dio_log_interceptor.dart';
+import 'code.dart';
+import 'dio_log_interceptor.dart';
 import 'package:flutterapp/utils/loading_utils.dart';
 
 import 'address.dart';
