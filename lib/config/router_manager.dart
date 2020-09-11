@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterapp/provider/count_down_time_provider.dart';
+import 'package:flutterapp/provider/user_info_provider.dart';
 import 'package:flutterapp/ui/page/login_page.dart';
 import 'package:flutterapp/ui/page/splash_page.dart';
 import 'package:flutterapp/ui/page/home_page.dart';
@@ -26,9 +27,14 @@ class Router {
                   child: SplashPage(),
                 ));
       case RouteName.login:
-        return MaterialPageRoute(builder: (content){
-          return LoginPage();
-        });
+        return MaterialPageRoute(
+            builder: (_) => MultiProvider(
+              providers: [
+                ChangeNotifierProvider(
+                    create: (_) => UserInfoProvider())
+              ],
+              child: LoginPage(),
+            ));
       case RouteName.home:
         return MaterialPageRoute(builder: (content){
           return HomePage();

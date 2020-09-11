@@ -4,6 +4,8 @@ class UserInfoModel {
   String name;
   int age;
 
+  UserInfoModel(){}
+
   UserInfoModel.fromJson(Map<String, dynamic> json) {
     userId = json['user_id'];
     name = json['name'];

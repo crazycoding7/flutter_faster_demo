@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutterapp/models/user_info_model.dart';
 import 'package:flutterapp/net/api.dart';
 import 'package:flutterapp/net/result_data.dart';
+import 'package:flutterapp/provider/user_info_provider.dart';
 import 'package:oktoast/oktoast.dart';
+import 'package:provider/provider.dart';
 
 /// 登录页
 class LoginPage extends StatefulWidget {
@@ -20,6 +22,10 @@ class _LoginPageState extends State<LoginPage> {
     if (result.isSuccess()) {
       UserInfoModel userInfoModel = UserInfoModel.fromJson(result.data['data']);
 
+      // 更新数据源
+      Provider.of<UserInfoProvider>(context, listen: false)
+          .update(userInfoModel);
+
       showToast('登录成功：${userInfoModel.name}');
       LogUtil.v('login response entity: $userInfoModel');
     }
@@ -33,7 +39,8 @@ class _LoginPageState extends State<LoginPage> {
             onPressed: () {
               _onLogin();
             },
-            child: new Text("login in")),
+            child: new Text(
+                "login in :  ${context.watch<UserInfoProvider>().getData()?.name}")),
       ),
     );
   }
