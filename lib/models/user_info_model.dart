@@ -1,13 +1,15 @@
+
 class UserInfoModel {
   String userId;
   String name;
-  int sex;
+  int age;
 
-  UserInfoModel.fromJson(Map<String, dynamic> json)
-      : userId = json['userId'],
-        name = json['name'],
-        sex = json['sex'];
+  UserInfoModel.fromJson(Map<String, dynamic> json) {
+    userId = json['user_id'];
+    name = json['name'];
+    age = json['age'];
+  }
 
   Map<String, dynamic> toJson() =>
-      <String, dynamic>{'userId': userId, 'name': name, 'sex': sex};
+      <String, dynamic>{'user_id': userId, 'name': name, 'age': age};
 }

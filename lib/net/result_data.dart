@@ -1,8 +1,11 @@
 class ResultData {
   var data;
-  bool isSuccess;
   int code;
-  var headers;
+  String message;
 
-  ResultData(this.data, this.isSuccess, this.code, {this.headers});
+  bool isSuccess() {
+    return code > 0;
+  }
+
+  ResultData(this.data, this.message, this.code);
 }

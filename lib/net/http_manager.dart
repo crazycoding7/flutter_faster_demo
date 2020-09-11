@@ -1,11 +1,11 @@
-
 import 'package:dio/dio.dart';
 import 'package:flutterapp/net/code.dart';
 import 'package:flutterapp/net/dio_log_interceptor.dart';
 import 'package:flutterapp/utils/loading_utils.dart';
+
+import 'address.dart';
 import 'response_interceptors.dart';
 import 'result_data.dart';
-import 'address.dart';
 
 class HttpManager {
   static HttpManager _instance = HttpManager._internal();
@@ -119,5 +119,5 @@ ResultData resultError(DioError e) {
     errorResponse.statusCode = Code.NETWORK_TIMEOUT;
   }
   return new ResultData(
-      errorResponse.statusMessage, false, errorResponse.statusCode);
+      "", errorResponse.statusMessage, errorResponse.statusCode);
 }
