@@ -18,7 +18,7 @@ class App extends StatelessWidget{
       title: '一元购',
       theme: new ThemeData(primaryColor: Colors.red),
       onGenerateRoute: Router.generateRoute,
-      initialRoute: RouteName.splash
+      initialRoute: RouteName.test
       );
   }
 }

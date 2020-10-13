@@ -5,6 +5,7 @@ import 'package:flutterapp/provider/user_info_provider.dart';
 import 'package:flutterapp/ui/page/login/login_page.dart';
 import 'package:flutterapp/ui/page/splash_page.dart';
 import 'package:flutterapp/ui/page/home/home_page.dart';
+import 'package:flutterapp/ui/page/test/inherited_widget_test_route.dart';
 import 'package:provider/provider.dart';
 
 class RouteName {
@@ -12,6 +13,8 @@ class RouteName {
   static const String home = '/';
   static const String login = 'login';
   static const String register = 'register';
+  static const String test = 'test';
+
 }
 
 class Router {
@@ -38,6 +41,10 @@ class Router {
       case RouteName.home:
         return MaterialPageRoute(builder: (content){
           return HomePage();
+        });
+      case RouteName.test:
+        return MaterialPageRoute(builder: (content){
+          return InheritedWidgetTestRoute();
         });
       default:
         return CupertinoPageRoute(
