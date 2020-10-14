@@ -12,8 +12,6 @@ class ShareDataWidget extends InheritedWidget{
   final Function onDataChange;
 
   static ShareDataWidget of(BuildContext buildContext){
-
-    Provider.of<CartModel>(buildContext);
     return buildContext.dependOnInheritedWidgetOfExactType<ShareDataWidget>();
     //return buildContext.getElementForInheritedWidgetOfExactType<ShareDataWidget>().widget;
   }

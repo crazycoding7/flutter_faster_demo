@@ -6,9 +6,6 @@ import 'package:flutterapp/ui/page/test/share_data_widget.dart';
 class TestWidget extends StatefulWidget{
   @override
   _TestWidget createState() => _TestWidget();
-
-  ValueNotifier x;
-
 }
 
 class _TestWidget extends State<TestWidget>{
@@ -25,6 +22,9 @@ class _TestWidget extends State<TestWidget>{
   void didChangeDependencies() {
     super.didChangeDependencies();
     LogUtil.e('didChangeDependencies()..');
+    // setState(() {
+    //
+    // });
   }
 
 }

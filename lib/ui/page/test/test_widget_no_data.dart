@@ -1,6 +1,7 @@
 
 import 'package:common_utils/common_utils.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutterapp/ui/page/test/share_data_widget.dart';
 
 class TestWidgetNoData extends StatefulWidget{
@@ -9,10 +10,16 @@ class TestWidgetNoData extends StatefulWidget{
 }
 
 class _TestWidgetNoData extends State<TestWidgetNoData>{
+  int iii = 0;
+
   @override
   Widget build(BuildContext context) {
-    LogUtil.e('_TestWidgetNoData.. build is exec');
-    return Text("no data register");
+    LogUtil.e('_TestWidgetNoData.. build is exec ${iii}');
+    return InkWell(child:Text("no data register ${iii}"),onTap: (){
+      setState(() {
+        iii++;
+      });
+    },);
   }
 
   @override
