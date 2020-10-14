@@ -12,6 +12,10 @@ class InheritedWidgetTestRoute extends StatefulWidget {
 class _InheritedWidgetTestRouteState extends State<InheritedWidgetTestRoute> {
   int count = -1;
 
+  onChange(){
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +25,7 @@ class _InheritedWidgetTestRouteState extends State<InheritedWidgetTestRoute> {
         child: Center(
           child: ShareDataWidget( //使用ShareDataWidget
             data: count,
+            onDataChange: onChange(),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
