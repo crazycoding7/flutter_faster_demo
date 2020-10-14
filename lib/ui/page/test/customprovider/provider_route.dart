@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterapp/ui/page/test/customprovider/cart_model.dart';
 import 'package:flutterapp/ui/page/test/customprovider/change_notifier_provider.dart';
+import 'package:flutterapp/ui/page/test/customprovider/test_provider_empty_widget.dart';
+import 'package:flutterapp/ui/page/test/customprovider/test_provider_widget.dart';
 
 import 'item.dart';
 
@@ -29,12 +31,8 @@ class _ProviderRouteState extends State<ProviderRoute> {
                       return Text('总价: ${cart.totalPrice}');
                     },
                   ),
-                  Builder(
-                    builder: (context) {
-                      var cart = ChangeNotifierProvider.of<CartModel>(context);
-                      return Text('222总价: ${cart.totalPrice}');
-                    },
-                  ),
+                  TestProviderWidget(),
+                  TestProviderEmptyWidget(),
                   Builder(
                     builder: (context) {
                       print("RaisedButton build---- listener 设置为false就可以不注册依赖关系"); //在后面优化部分会用到

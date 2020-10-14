@@ -73,7 +73,7 @@ class _ChangeNotifierProviderState<T extends MyChangeNotifier>
 
   @override
   Widget build(BuildContext context) {
-    print(' provider  builder ....============= ${widget.child.hashCode}');
+    print(' provider  builder ....============= widget.child =  ${widget.child.hashCode} widget.data = ${widget.data}');
     return InheritedProvider<T>(
       data: widget.data,
       child: widget.child,
