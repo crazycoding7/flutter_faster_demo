@@ -39,9 +39,9 @@ class _InheritedWidgetTestRouteState extends State<InheritedWidgetTestRoute> {
                   child: Text("Increment"),
                   //每点击一次，将count自增，然后重新build,ShareDataWidget的data将被更新
                   onPressed: () {
-                    setState(() {
+                    //setState(() {
                       ++ count;
-                    });
+                    //});
                   }  ,
                 )
               ],

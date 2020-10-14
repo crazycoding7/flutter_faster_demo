@@ -14,6 +14,10 @@ class TestWidget extends StatefulWidget{
 class _TestWidget extends State<TestWidget>{
   @override
   Widget build(BuildContext context) {
+    LogUtil.e('_TestWidget  build()..');
+
+
+
     return Text(ShareDataWidget.of(context).data.toString());
   }
 
