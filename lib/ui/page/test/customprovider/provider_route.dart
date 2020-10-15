@@ -38,7 +38,7 @@ class _ProviderRouteState extends State<ProviderRoute> {
                       print("RaisedButton build---- listener 设置为false就可以不注册依赖关系"); //在后面优化部分会用到
                       //var cart = ChangeNotifierProvider.of<CartModel>(context);
                       return RaisedButton(
-                        child: Text("添加商品"),
+                        child: Text("添加商品 provider"),
                         onPressed: () {
                           //给购物车中添加商品，添加后总价会更新
                           ChangeNotifierProvider.of<CartModel>(context,listen: false)

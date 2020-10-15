@@ -22,7 +22,7 @@ class _TestProviderWidget extends State<TestProviderWidget>{
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    LogUtil.e('didChangeDependencies()..--');
+    LogUtil.e('didChangeDependencies()..--  有依赖的');
   }
 
 }

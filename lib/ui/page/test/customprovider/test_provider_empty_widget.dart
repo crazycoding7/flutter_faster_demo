@@ -21,7 +21,7 @@ class _TestProviderEmptyWidget extends State<TestProviderEmptyWidget>{
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    LogUtil.e(' _TestProviderEmptyWidget didChangeDependencies()..--');
+    LogUtil.e(' _TestProviderEmptyWidget didChangeDependencies().. 无依赖的。--');
   }
 
 }
